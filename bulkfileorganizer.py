@@ -8,7 +8,6 @@ folder_name = ['image files','pdf files']
 
 for loop in range (0,2):
     if not os.path.exists(path + folder_name[loop]):
-        print(path + folder_name[loop])
         os.makedirs(path + folder_name[loop])
     
 for file in file_name:
@@ -16,3 +15,4 @@ for file in file_name:
         shutil.move(path + file,path + "image files/" + file)
     elif ".pdf" in file and not os.path.exists(path + "pdf files/" + file):
         shutil.move(path +  file,path +"pdf files/" + file)
+input("Press Enter to exit..")
